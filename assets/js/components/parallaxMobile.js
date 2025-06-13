@@ -1,8 +1,5 @@
-const homeContainerDOM = document.querySelector('#home');
-const homeIconsDOM = document.querySelectorAll('.home__layer');
-
-function parallax() {
-	homeContainerDOM.addEventListener('mousemove', (e) => {
+function parallaxMobile() {
+	homeContainerDOM.addEventListener('touchmove', (e) => {
 		homeIconsDOM.forEach((icon) => {
 			const speed = icon.getAttribute('data-speed');
 			const x = (window.innerWidth - e.pageX * speed) / 100;
@@ -12,7 +9,4 @@ function parallax() {
 	});
 }
 
-
-
-
-export default parallax
+export default parallaxMobile
